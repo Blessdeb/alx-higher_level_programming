@@ -11,7 +11,7 @@ Example:
 N must be an integer greater than or equal to 4.
 
 Attributes:
-    board (list): A list of lists representing the chessboard.
+    board (list): A list of lists that represent chessboard.
     solutions (list): A list of lists containing solutions.
 
 Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]]
@@ -50,13 +50,10 @@ def get_solution(board):
 def xout(board, row, col):
     """X out spots on a chessboard.
 
-    All spots where non-attacking queens can no
-    longer be played are X-ed out.
-
     Args:
         board (list): The current working chessboard.
-        row (int): The row where a queen was last played.
-        col (int): The column where a queen was last played.
+        row (int): The row where queen was last played.
+        col (int): The column queen was last played.
     """
     # X out all forward spots
     for c in range(col + 1, len(board)):
@@ -106,8 +103,8 @@ def recursive_solve(board, row, queens, solutions):
     Args:
         board (list): The current working chessboard.
         row (int): The current working row.
-        queens (int): The current number of placed queens.
-        solutions (list): A list of lists of solutions.
+        queens (int): The current number of placd queen.
+        solutions (list): A list of lists of soution.
     Returns:
         solutions
     """
